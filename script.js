@@ -1,27 +1,73 @@
-// Smooth Scroll for all anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            window.scrollTo({
-                top: target.offsetTop - 80,
-                behavior: 'smooth'
-            });
-        }
-    });
+// Initialize Lucide icons
+lucide.createIcons();
+
+// Mobile Menu Logic
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const closeMenuBtn = document.querySelector('.menu-close-btn');
+const mobileOverlay = document.getElementById('mobile-menu-overlay');
+const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+const toggleMenu = (show) => {
+    mobileOverlay.classList.toggle('active', show);
+    document.body.style.overflow = show ? 'hidden' : '';
+};
+
+if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', () => toggleMenu(true));
+}
+
+if (closeMenuBtn) {
+    closeMenuBtn.addEventListener('click', () => toggleMenu(false));
+}
+
+mobileLinks.forEach(link => {
+    link.addEventListener('click', () => toggleMenu(false));
 });
 
-// Sticky Navbar Highlight
+// Theme Toggle Logic
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+// Check for saved theme
+const savedTheme = localStorage.getItem('theme') || 'light';
+body.setAttribute('data-theme', savedTheme);
+
+themeToggle.addEventListener('click', () => {
+    const currentTheme = body.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    
+    body.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+});
+
+// Scroll Reveal Logic
+const revealElements = document.querySelectorAll('.reveal');
+
+const revealOnScroll = () => {
+    revealElements.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (elementTop < windowHeight - 50) {
+            el.classList.add('active');
+        }
+    });
+};
+
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll(); // Initial check
+
+// Nav Highlight & Smooth Scroll
 const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('.nav-links a');
+const navLinks = document.querySelectorAll('.nav-link');
 
 window.addEventListener('scroll', () => {
     let current = '';
+    
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - 100) {
+        if (pageYOffset >= sectionTop - 150) {
             current = section.getAttribute('id');
         }
     });
@@ -33,16 +79,47 @@ window.addEventListener('scroll', () => {
         }
     });
 
-    // Suble navbar shadow on scroll
-    const nav = document.querySelector('nav');
+    // Navbar style on scroll
+    const navbar = document.getElementById('navbar');
     if (window.scrollY > 50) {
-        nav.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)';
+        navbar.style.boxShadow = 'var(--shadow-md)';
     } else {
-        nav.style.boxShadow = 'none';
+        navbar.style.boxShadow = 'none';
     }
 });
 
-// Form Submission (Simulated)
+// Skills Toggle Logic
+const toggleBtn = document.getElementById('toggle-skills');
+const extraSkills = document.querySelectorAll('.extra-skill');
+const toggleText = document.getElementById('toggle-text');
+const toggleIcon = document.getElementById('toggle-icon');
+
+if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+        const isHidden = extraSkills[0].classList.contains('hidden');
+        
+        extraSkills.forEach(skill => {
+            if (isHidden) {
+                skill.classList.remove('hidden');
+                skill.classList.add('show');
+            } else {
+                skill.classList.remove('show');
+                skill.classList.add('hidden');
+            }
+        });
+
+        if (isHidden) {
+            toggleText.textContent = 'See Less';
+            toggleIcon.setAttribute('data-lucide', 'chevron-up');
+        } else {
+            toggleText.textContent = 'More Skills';
+            toggleIcon.setAttribute('data-lucide', 'chevron-down');
+        }
+        lucide.createIcons();
+    });
+}
+
+// Contact Form Simulation
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {

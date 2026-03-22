@@ -7,6 +7,7 @@
     <title>Maheshwaram Ganesh | Software Engineer</title>
     <meta name="description"
         content="Portfolio of Maheshwaram Ganesh, a Software Engineer and AI Enthusiast building scalable systems.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,247 +16,352 @@
 </head>
 
 <body>
-    <nav>
+    <nav id="navbar">
         <div class="container nav-content">
             <a href="#home" class="logo">MG.</a>
             <div class="nav-links">
-                <a href="#home" class="active">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#experience">Experience</a>
-                <a href="#achievements">Achievements</a>
-                <a href="#education">Education</a>
-                <a href="#contact">Contact</a>
-                <a href="resume.pdf" download="Maheshwaram_Ganesh_Resume.pdf" class="resume-btn">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#training" class="nav-link">Training</a>
+                <a href="#certificates" class="nav-link">Certificates</a>
+                <a href="#achievements" class="nav-link">Achievements</a>
+                <a href="resume.pdf" download="Maheshwaram_Ganesh_Resume.pdf" class="btn btn-primary btn-sm">
+                    Download CV
+                </a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <i data-lucide="moon" class="dark-icon"></i>
+                    <i data-lucide="sun" class="light-icon"></i>
+                </button>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay">
+        <div class="mobile-menu-content">
+            <button class="menu-close-btn" aria-label="Close Menu">
+                <i data-lucide="x"></i>
+            </button>
+            <div class="mobile-nav-links">
+                <a href="#home" class="mobile-nav-link">Home</a>
+                <a href="#about" class="mobile-nav-link">About</a>
+                <a href="#skills" class="mobile-nav-link">Skills</a>
+                <a href="#projects" class="mobile-nav-link">Projects</a>
+                <a href="#training" class="mobile-nav-link">Training</a>
+                <a href="#certificates" class="mobile-nav-link">Certificates</a>
+                <a href="#achievements" class="mobile-nav-link">Achievements</a>
+                <a href="#contact" class="mobile-nav-link">Contact</a>
+            </div>
+            <div class="mobile-menu-footer">
+                <a href="resume.pdf" download="Maheshwaram_Ganesh_Resume.pdf" class="btn btn-primary">
                     Download CV
                 </a>
             </div>
         </div>
-    </nav>
+    </div>
 
     <main>
-        <section id="home">
-            <div class="container hero-container">
-                <div class="hero-identity">
-                    <i data-lucide="map-pin" style="width: 18px;"></i> India • Open to internships / roles
+        <section id="home" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="badge">Available for Roles</div>
+                    <h1 class="hero-title">Maheshwaram Ganesh</h1>
+                    <p class="hero-role">Full-Stack Developer | AI Enthusiast</p>
+                    <p class="hero-tagline">
+                        Building scalable systems, intelligent applications, and production-ready software.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View Projects <i data-lucide="arrow-right"></i></a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    </div>
                 </div>
-                <h1 class="hero-title">Maheshwaram Ganesh</h1>
-                <p class="hero-subtitle">Software Engineer • Full-Stack Developer • AI Enthusiast</p>
-                <p class="hero-summary">
-                    Full-stack engineer building scalable real-time systems and AI-powered applications.
-                    I focus on high-performance architecture, production-grade reliability, and solving complex problems
-                    with clean, maintainable code.
-                </p>
-                <div class="hero-actions">
-                    <a href="#projects" class="btn btn-primary">View Projects <i data-lucide="arrow-right"></i></a>
-                    <a href="resume.pdf" download="Maheshwaram_Ganesh_Resume.pdf" class="btn btn-secondary">
-                        Download Resume <i data-lucide="download"></i>
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                <div class="hero-visual">
+                    <div class="avatar-frame">
+                        <img src="profile.jpg" alt="Maheshwaram Ganesh" class="avatar">
+                    </div>
                 </div>
-                <div class="hero-socials">
-                    <a href="https://github.com/Ganesh2325" class="social-link"><i data-lucide="github"></i>
-                        GitHub</a>
-                    <a href="https://www.linkedin.com/in/maheshwaram-ganesh-182a84325/" class="social-link"><i
-                            data-lucide="linkedin"></i>
-                        LinkedIn</a>
-                    <a href="mailto:ganeshmaheshwaram2005@gmail.com" class="social-link"><i data-lucide="mail"></i>
-                        Email</a>
-                </div>
+            </div>
+            <div class="scroll-indicator">
+                <i data-lucide="mouse-pointer-2"></i>
+                <span>Scroll to explore</span>
             </div>
         </section>
 
-        <section id="about">
+        <section id="about" class="about">
             <div class="container">
-                <h2 class="section-title" style="text-align: left;">Engineering Mindset</h2>
+                <div class="section-header">
+                    <h2 class="section-title">Professional Summary</h2>
+                </div>
                 <div class="about-grid">
-                    <div class="about-text">
-                        <p>
-                            I am a software engineer driven by a passion for building systems that scale and solve
-                            real-world problems. My approach to engineering is rooted in fundamental CS principles,
-                            clean architecture, and a production-first mindset.
+                    <div class="about-content">
+                        <p class="lead">
+                            I am a <strong>B.Tech CSE student</strong> with a strong foundation in <strong>Data
+                                Structures & Algorithms</strong> and a passion for building full-stack production
+                            systems.
                         </p>
                         <p>
-                            With experience across the full stack—from low-latency backends to responsive frontends—I
-                            thrive on the challenge of optimizing performance and ensuring system reliability. I believe
-                            in extreme ownership and continuous learning as the foundation of world-class engineering.
+                            With experience in developing scalable backend architectures and a deep interest in AI
+                            applications, I focus on creating software that is both efficient and impactful. I am a
+                            dedicated team player with an adaptability-first mindset and a relentless drive for
+                            problem-solving.
                         </p>
-                        <p>
-                            Currently, I am exploring the intersection of traditional system design and GenAI, building
-                            AI-powered applications that leverage modern LLM architectures and RAG systems.
-                        </p>
-                    </div>
-                    <div class="about-highlight">
-                        <h3>Core Philosophy</h3>
-                        <ul class="mindset-list">
-                            <li class="mindset-item">
-                                <i data-lucide="check-circle-2"></i>
-                                <span><strong>Scalable Systems:</strong> Designing for growth and high
-                                    throughput.</span>
-                            </li>
-                            <li class="mindset-item">
-                                <i data-lucide="check-circle-2"></i>
-                                <span><strong>Clean Architecture:</strong> Prioritizing maintainability and
-                                    modularity.</span>
-                            </li>
-                            <li class="mindset-item">
-                                <i data-lucide="check-circle-2"></i>
-                                <span><strong>Performance First:</strong> Optimizing for speed and efficiency.</span>
-                            </li>
-                            <li class="mindset-item">
-                                <i data-lucide="check-circle-2"></i>
-                                <span><strong>Full Ownership:</strong> Responsibility from design to deployment.</span>
-                            </li>
+                        <ul class="about-list">
+                            <li><i data-lucide="check-circle"></i> Strong foundation in DSA & Problem Solving</li>
+                            <li><i data-lucide="check-circle"></i> Experience with Full-Stack Production Systems</li>
+                            <li><i data-lucide="check-circle"></i> Passion for Scalable Backend & AI/ML</li>
+                            <li><i data-lucide="check-circle"></i> Adaptable Team Player</li>
                         </ul>
                     </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">Years of Development</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100+</span>
+                            <span class="stat-label">LeetCode Problems</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="skills">
+        <section id="skills" class="skills">
             <div class="container">
-                <h2 class="section-title">Technical Expertise</h2>
+                <div class="section-header">
+                    <h2 class="section-title">Technical Skills</h2>
+                </div>
                 <div class="skills-grid">
-                    <div class="skill-cluster">
-                        <h3><i data-lucide="code-2"></i> Languages & Foundations</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">C/C++</span>
-                            <span class="skill-tag">Java</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">DSA</span>
+                    <!-- Featured Skills (Always Visible) -->
+                    <div class="skill-category">
+                        <div class="skill-category-header">
+                            <i data-lucide="layout"></i>
+                            <h3>Frontend</h3>
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-item"><i class="devicon-react-original colored"></i><span>ReactJS</span>
+                            </div>
+                            <div class="skill-item"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+                            <div class="skill-item"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+                            <div class="skill-item"><i class="devicon-tailwindcss-original colored"></i><span>Tailwind
+                                    CSS</span></div>
                         </div>
                     </div>
-                    <div class="skill-cluster">
-                        <h3><i data-lucide="layout"></i> Frontend</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">HTML5</span>
-                            <span class="skill-tag">CSS3</span>
-                            <span class="skill-tag">Tailwind CSS</span>
-                            <span class="skill-tag">React.js</span>
+
+                    <div class="skill-category">
+                        <div class="skill-category-header">
+                            <i data-lucide="server"></i>
+                            <h3>Backend</h3>
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-item"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span>
+                            </div>
+                            <div class="skill-item"><i class="devicon-express-original"></i><span>Express.js</span>
+                            </div>
+                            <div class="skill-item"><i data-lucide="globe"></i><span>REST APIs</span></div>
                         </div>
                     </div>
-                    <div class="skill-cluster">
-                        <h3><i data-lucide="server"></i> Backend</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Node.js</span>
-                            <span class="skill-tag">Express.js</span>
-                            <span class="skill-tag">REST APIs</span>
-                            <span class="skill-tag">Socket.IO</span>
+
+                    <!-- Hidden Skills (Technical Breadth) -->
+                    <div class="skill-category extra-skill hidden">
+                        <div class="skill-category-header">
+                            <i data-lucide="code-2"></i>
+                            <h3>Languages</h3>
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-item"><i class="devicon-cplusplus-plain colored"></i><span>C/C++</span>
+                            </div>
+                            <div class="skill-item"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+                            <div class="skill-item"><i
+                                    class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
                         </div>
                     </div>
-                    <div class="skill-cluster">
-                        <h3><i data-lucide="database"></i> Databases</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">MySQL</span>
-                            <span class="skill-tag">MongoDB</span>
-                            <span class="skill-tag">Firebase</span>
-                            <span class="skill-tag">Prisma ORM</span>
+
+                    <div class="skill-category extra-skill hidden">
+                        <div class="skill-category-header">
+                            <i data-lucide="cpu"></i>
+                            <h3>Core CS</h3>
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-item"><i data-lucide="layers"></i><span>Data Structures</span></div>
+                            <div class="skill-item"><i data-lucide="git-branch"></i><span>Algorithms</span></div>
+                            <div class="skill-item"><i data-lucide="cpu"></i><span>Operating Systems</span></div>
                         </div>
                     </div>
-                    <div class="skill-cluster">
-                        <h3><i data-lucide="cpu"></i> AI & ML</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Generative AI</span>
-                            <span class="skill-tag">RAG</span>
-                            <span class="skill-tag">LLMs</span>
-                            <span class="skill-tag">MCP</span>
-                            <span class="skill-tag">AI Agents</span>
+
+                    <div class="skill-category extra-skill hidden">
+                        <div class="skill-category-header">
+                            <i data-lucide="database"></i>
+                            <h3>Databases</h3>
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-item"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+                            <div class="skill-item"><i
+                                    class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></div>
+                            <div class="skill-item"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span>
+                            </div>
+                            <div class="skill-item"><i class="devicon-firebase-plain colored"></i><span>Firebase</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="skill-cluster">
-                        <h3><i data-lucide="wrench"></i> Tools & DevOps</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Git</span>
-                            <span class="skill-tag">GitHub</span>
-                            <span class="skill-tag">Postman</span>
-                            <span class="skill-tag">Docker</span>
-                            <span class="skill-tag">VS Code</span>
+
+                    <div class="skill-category extra-skill hidden">
+                        <div class="skill-category-header">
+                            <i data-lucide="wrench"></i>
+                            <h3>Tools & Platforms</h3>
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-item"><i class="devicon-docker-plain colored"></i><span>Docker</span>
+                            </div>
+                            <div class="skill-item"><i class="devicon-prisma-original"></i><span>Prisma ORM</span></div>
+                            <div class="skill-item"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+                            <div class="skill-item"><i class="devicon-vite-original colored"></i><span>Vite</span></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category extra-skill hidden">
+                        <div class="skill-category-header">
+                            <i data-lucide="users"></i>
+                            <h3>Soft Skills</h3>
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-item"><i data-lucide="brain"></i><span>Problem-Solving</span></div>
+                            <div class="skill-item"><i data-lucide="users-2"></i><span>Teamwork</span></div>
+                            <div class="skill-item"><i data-lucide="refresh-cw"></i><span>Adaptability</span></div>
+                        </div>
+                    </div>
+                    <!-- Artificial Intelligence (Always Visible) -->
+                    <div class="skill-category extra-skill hidden">
+                        <div class="skill-category-header">
+                            <i data-lucide="brain-circuit"></i>
+                            <h3>Artificial Intelligence</h3>
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-item"><i data-lucide="sparkles"></i><span>Generative AI</span></div>
+                            <div class="skill-item"><i data-lucide="database"></i><span>RAG</span></div>
+                            <div class="skill-item"><i data-lucide="binary"></i><span>LLM</span></div>
+                            <div class="skill-item"><i data-lucide="bot"></i><span>AI Agents</span></div>
+                            <div class="skill-item"><i data-lucide="plug-zap"></i><span>MCP</span></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="skills-cta">
+                    <button id="toggle-skills" class="btn btn-secondary">
+                        <span id="toggle-text">More Skills</span>
+                        <i data-lucide="chevron-down" id="toggle-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Projects</h2>
+                </div>
+                <div class="projects-container">
+                    <!-- Project 1: Pulse Chat -->
+                    <div class="project-card reveal">
+                        <div class="project-image">
+                            <img src="https://media.istockphoto.com/id/1445426863/vector/chat-bot-vector-logo-design-concept.jpg?s=612x612&w=0&k=20&c=XDdfzS4lNW9yxQ0BQGZq9KMLL4bJ8ywXlYdAhBSuoCA="
+                                alt="Real-Time Messaging">
+                            <div class="project-overlay">
+                                <a href="https://github.com/Ganesh2325/PulseChat" target="_blank" class="project-link">
+                                    <i data-lucide="github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-type">Full-Stack Development</div>
+                            <h3 class="project-name">PulseChat Real-Time Messaging</h3>
+                            <p class="project-desc">
+                                Implemented real-time event-driven architecture using WebSockets. Designed a
+                                cross-platform approach for seamless high-speed messaging. Optimized backend message
+                                routing to ensure sub-second delivery.
+                            </p>
+                            <div class="project-tech">
+                                <span>TypeScript</span>
+                                <span>Node.js</span>
+                                <span>Next.js</span>
+                                <span>WebSockets</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="project-card reveal">
+                        <div class="project-image">
+                            <img src="smm-image.jpg" alt="Subject Material Management System">
+                            <div class="project-overlay">
+                                <a href="https://github.com/Ganesh2325/Subject-Material-Management" target="_blank"
+                                    class="project-link">
+                                    <i data-lucide="github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-type">Full-Stack Development</div>
+                            <h3 class="project-name">Subject Material Management System</h3>
+                            <p class="project-desc">
+                                Full-stack academic platform with role-based dashboards, secure file uploads (≤100MB)
+                                with preview & download, and a scalable RESTful backend.
+                            </p>
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>Express</span>
+                                <span>Prisma ORM</span>
+                                <span>Tailwind CSS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card reveal">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800"
+                                alt="AI Meal Planner">
+                            <div class="project-overlay">
+                                <a href="https://github.com/Ganesh2325/Meal-Planner-App" target="_blank"
+                                    class="project-link">
+                                    <i data-lucide="github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-type">AI & Web Application</div>
+                            <h3 class="project-name">AI-Powered Meal Planner & Nutrition Tracker</h3>
+                            <p class="project-desc">
+                                AI-based food recognition from images with automatic calorie & macronutrient calculation
+                                and personalized diet recommendations.
+                            </p>
+                            <div class="project-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>AI APIs</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects">
+        <section id="training" class="training">
             <div class="container">
-                <h2 class="section-title">Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-content">
-                            <div class="project-header">
-                                <span class="project-tagline">Real-Time Messaging</span>
-                                <h3>Pulse Chat</h3>
-                                <div class="project-meta">
-                                    <span class="tech-badge">TypeScript</span>
-                                    <span class="tech-badge">Next.js</span>
-                                    <span class="tech-badge">Node.js</span>
-                                    <span class="tech-badge">Socket.IO</span>
-                                </div>
-                            </div>
-                            <div class="project-body">
-                                <h4>Problem Statement</h4>
-                                <p>Existing chat applications often suffer from high latency and poor scalability when
-                                    handling thousands of concurrent real-time connections.</p>
-                                <h4>Technical Architecture</h4>
-                                <p>Architected a low-latency messaging platform using Node.js and Socket.IO for
-                                    persistent bidirectional communication, backed by a scalable TypeScript environment.
-                                </p>
-                                <h4>Key Engineering Contributions</h4>
-                                <ul class="project-contribution">
-                                    <li>Implemented real-time event-driven architecture using WebSockets.</li>
-                                    <li>Designed a cross-platform approach for seamless high-speed messaging.</li>
-                                    <li>Optimized backend message routing to ensure sub-second delivery.</li>
-                                </ul>
-                                <a href="https://github.com/Ganesh2325/PulseChat" class="social-link"><i
-                                        data-lucide="github"></i> View Repository</a>
-                            </div>
-                        </div>
-                        <div class="project-visual visual-pulse">
-                            <img src="https://img.freepik.com/premium-vector/chat-app-logo-sms-messenger-label-design-mobile-app-online-conversation-with-texting-message-ui-design-concept-vector-illustration_172533-1513.jpg"
-                                alt="Pulse Chat Preview">
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-visual visual-smm">
-                            <img src="smm-image.jpg" alt="SMM System Preview">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <span class="project-tagline">Academic Productivity</span>
-                                <h3>SMM System</h3>
-                                <div class="project-meta">
-                                    <span class="tech-badge">React</span>
-                                    <span class="tech-badge">Express</span>
-                                    <span class="tech-badge">MongoDB</span>
-                                    <span class="tech-badge">Prisma</span>
-                                </div>
-                            </div>
-                            <div class="project-body">
-                                <h4>Solution Overview</h4>
-                                <p>A robust Subject Material Management System designed to streamline academic resource
-                                    distribution through role-based dashboards.</p>
-                                <h4>Key Engineering Contributions</h4>
-                                <ul class="project-contribution">
-                                    <li>Developed secure REST API architecture for file and metadata management.</li>
-                                    <li>Implemented role-based access control (RBAC) for admins and students.</li>
-                                    <li>Optimized database queries using Prisma ORM to improve dashboard load times.
-                                    </li>
-                                </ul>
-                                <a href="https://github.com/Ganesh2325/Subject-Material-Management"
-                                    class="social-link"><i data-lucide="github"></i> View Repository</a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="section-header">
+                    <h2 class="section-title">Professional Training</h2>
                 </div>
-            </div>
-        </section>
-
-        <section id="experience">
-            <div class="container">
-                <h2 class="section-title">Professional Training</h2>
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-date">2024</div>
@@ -267,161 +373,137 @@
                                 <li>Focus on asymptotic analysis and space-time complexity optimization.</li>
                                 <li>Extensive practice in competitive programming and interview readiness.</li>
                             </ul>
+                            <a href="https://drive.google.com/file/d/1R85t27_2jnoRflWUwv0DoIC7d3Qk9VVo/view?usp=sharing"
+                                target="_blank" class="btn btn-secondary"
+                                style="margin-top: 1rem; font-size: 0.85rem; padding: 0.5rem 1.2rem;">
+                                <i data-lucide="award" style="width: 16px; height: 16px; margin-right: 0.5rem;"></i>
+                                <span>View Certificate</span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="achievements">
+        <section id="certificates" class="certificates">
             <div class="container">
-                <h2 class="section-title">Key Achievements</h2>
+                <div class="section-header">
+                    <h2 class="section-title">Professional Certifications</h2>
+                </div>
+                <div class="certs-grid">
+                    <a href="https://drive.google.com/file/d/1Yw3XrnlCPlNI4ueOsGwRMYZCxXuouJol/view?usp=sharing"
+                        target="_blank" class="cert-card">
+                        <div class="cert-icon"><i data-lucide="brain"></i></div>
+                        <div class="cert-info">
+                            <h4>Introduction to LLMs</h4>
+                            <p>NPTEL IIT Delhi</p>
+                        </div>
+                        <div class="cert-arrow"><i data-lucide="chevron-right"></i></div>
+                    </a>
+                    <a href="https://drive.google.com/file/d/1LJr08bnLzDJ78rKr6PD56eaOaMcgbU8-/view?usp=sharing"
+                        target="_blank" class="cert-card">
+                        <div class="cert-icon"><i data-lucide="codepen"></i></div>
+                        <div class="cert-info">
+                            <h4>Java Certification</h4>
+                            <p>Neo Colab</p>
+                        </div>
+                        <div class="cert-arrow"><i data-lucide="chevron-right"></i></div>
+                    </a>
+                    <a href="https://drive.google.com/file/d/1XIiMNRH22KgFQUsRd7jRFrnAg_z9xxKQ/view?usp=sharing"
+                        target="_blank" class="cert-card">
+                        <div class="cert-icon"><i data-lucide="binary"></i></div>
+                        <div class="cert-info">
+                            <h4>DSA Certification</h4>
+                            <p>Neo Colab</p>
+                        </div>
+                        <div class="cert-arrow"><i data-lucide="chevron-right"></i></div>
+                    </a>
+                    <a href="https://www.hackerrank.com/certificates/iframe/7216e2582994" target="_blank"
+                        class="cert-card">
+                        <div class="cert-icon"><i data-lucide="network"></i></div>
+                        <div class="cert-info">
+                            <h4>React Certification</h4>
+                            <p>HackerRank</p>
+                        </div>
+                        <div class="cert-arrow"><i data-lucide="chevron-right"></i></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements" class="achievements">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Achievements</h2>
+                </div>
                 <div class="achievements-grid">
                     <div class="achievement-card">
-                        <i data-lucide="code"></i>
-                        <span class="achievement-value">100+</span>
-                        <span class="achievement-label">Problems Solved</span>
+                        <div class="achievement-icon">
+                            <i data-lucide="code"></i>
+                        </div>
+                        <h3>100+ Solved</h3>
+                        <p>Problems across LeetCode, GFG, HackerRank</p>
                     </div>
                     <div class="achievement-card">
-                        <i data-lucide="star"></i>
-                        <span class="achievement-value">5-Star</span>
-                        <span class="achievement-label">C++ Rating</span>
+                        <div class="achievement-icon">
+                            <i data-lucide="star"></i>
+                        </div>
+                        <h3>5-Star Rating</h3>
+                        <p>Excellence in C++ programming skills</p>
                     </div>
                     <div class="achievement-card">
-                        <i data-lucide="award"></i>
-                        <span class="achievement-value">Strong</span>
-                        <span class="achievement-label">CP Practice</span>
-                    </div>
-                    <div class="achievement-card">
-                        <i data-lucide="shield-check"></i>
-                        <span class="achievement-value">Verified</span>
-                        <span class="achievement-label">Platform Badges</span>
+                        <div class="achievement-icon">
+                            <i data-lucide="award"></i>
+                        </div>
+                        <h3>Competitive Coder</h3>
+                        <p>Strong problem-solving and CP foundations</p>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section id="education">
+        <section id="contact" class="contact">
             <div class="container">
-                <h2 class="section-title">Education</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-date">2024 - 2027</div>
-                        <div class="timeline-content">
-                            <h3>B.Tech in Computer Science & Engineering</h3>
-                            <h4>Lovely Professional University</h4>
-                            <p>Focusing on Full-Stack Development, AI, and System Design.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">2021 - 2024</div>
-                        <div class="timeline-content">
-                            <h3>Diploma in Engineering</h3>
-                            <h4>Sree Datta Engineering & Science</h4>
-                            <p>Foundation in engineering principles and technical fundamentals.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Graduated 2021</div>
-                        <div class="timeline-content">
-                            <h3>Matriculation</h3>
-                            <h4>Telangana State Model School</h4>
-                            <p>Secondary education with high academic standing.</p>
-                        </div>
-                    </div>
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
                 </div>
-
-                <div style="margin-top: 5rem;">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 2rem;">Professional Certifications</h3>
-                    <div class="certs-grid">
-                        <div class="cert-card">
-                            <div class="cert-icon"><i data-lucide="brain"></i></div>
-                            <div class="cert-info">
-                                <h4>Introduction to LLMs</h4>
-                                <p>NPTEL IIT Delhi</p>
-                            </div>
-                        </div>
-                        <div class="cert-card">
-                            <div class="cert-icon"><i data-lucide="codepen"></i></div>
-                            <div class="cert-info">
-                                <h4>Java Certification</h4>
-                                <p>Neo Colab</p>
-                            </div>
-                        </div>
-                        <div class="cert-card">
-                            <div class="cert-icon"><i data-lucide="binary"></i></div>
-                            <div class="cert-info">
-                                <h4>DSA Certification</h4>
-                                <p>Neo Colab</p>
-                            </div>
-                        </div>
-                        <div class="cert-card">
-                            <div class="cert-icon"><i data-lucide="network"></i></div>
-                            <div class="cert-info">
-                                <h4>Network Communication</h4>
-                                <p>Coursera</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="container">
-                <h2 class="section-title">Get in Touch</h2>
                 <div class="contact-grid">
-                    <div class="contact-info">
+                    <div class="contact-card">
                         <h3>Let's build something exceptional.</h3>
                         <p>I'm currently looking for internships and full-time roles. If you have a project or a
                             position that's a good fit, I'd love to hear from you.</p>
-                        <div class="contact-methods">
-                            <a href="mailto:ganeshmaheshwaram2005@gmail.com" class="contact-method">
-                                <i data-lucide="mail"></i>
-                                ganeshmaheshwaram2005@gmail.com
-                            </a>
-                            <a href="tel:+919491759342" class="contact-method">
-                                <i data-lucide="phone"></i>
-                                +91 9491759342
-                            </a>
-                            <a href="https://www.linkedin.com/in/maheshwaram-ganesh-182a84325/" class="contact-method">
-                                <i data-lucide="linkedin"></i>
-                                LinkedIn Profile
-                            </a>
-                            <a href="https://github.com/Ganesh2325" class="contact-method">
-                                <i data-lucide="github"></i>
-                                GitHub Repository
-                            </a>
-                        </div>
+                        <ul class="contact-links">
+                            <li><a href="mailto:ganeshmaheshwaram2005@gmail.com" class="contact-link"><i
+                                        data-lucide="mail"></i> <span>ganeshmaheshwaram2005@gmail.com</span></a></li>
+                            <li><a href="https://www.linkedin.com/in/maheshwaram-ganesh-182a84325/" target="_blank"
+                                    class="contact-link"><i data-lucide="linkedin"></i> <span>LinkedIn</span></a></li>
+                            <li><a href="https://github.com/Ganesh2325" target="_blank" class="contact-link"><i
+                                        data-lucide="github"></i> <span>GitHub</span></a></li>
+                            <li><a href="tel:+919491759342" class="contact-link"><i data-lucide="phone"></i> <span>+91
+                                        9491759342</span></a></li>
+                        </ul>
                     </div>
-
                     <form class="contact-form">
                         <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" placeholder="E.g. Elon Musk" required>
+                            <input type="text" placeholder="Full Name" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" placeholder="elon@spacex.com" required>
+                            <input type="email" placeholder="Email Address" required>
                         </div>
                         <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" rows="5" placeholder="Tell me about your project..."
-                                required></textarea>
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
-                            Send Message <i data-lucide="send"></i>
-                        </button>
+                        <button type="submit" class="btn btn-primary">Send Message <i data-lucide="send"></i></button>
                     </form>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Maheshwaram Ganesh. All rights reserved.</p>
-            <p style="margin-top: 0.5rem; font-size: 0.75rem;">Designed for impact. Engineered for scale.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Maheshwaram Ganesh. Developed with care for a world-class impact.</p>
+            </div>
         </div>
     </footer>
 
@@ -432,3 +514,4 @@
 </body>
 
 </html>
+l>
