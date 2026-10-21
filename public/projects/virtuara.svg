@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Illustration: AI mentor, open book, quiz and voice waveform">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1440"/><stop offset="1" stop-color="#1e1b4b"/></linearGradient>
+    <radialGradient id="orb" cx=".4" cy=".35" r=".7"><stop offset="0" stop-color="#e0e7ff"/><stop offset=".55" stop-color="#818cf8"/><stop offset="1" stop-color="#4338ca"/></radialGradient>
+    <radialGradient id="glow" r=".5"><stop offset="0" stop-color="#60a5fa" stop-opacity=".55"/><stop offset="1" stop-color="#60a5fa" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <g stroke="#3b4a8c" stroke-width="1" opacity=".35">
+    <path d="M0 100H800M0 200H800M0 300H800M0 400H800M0 500H800M100 0V600M200 0V600M300 0V600M400 0V600M500 0V600M600 0V600M700 0V600"/>
+  </g>
+  <circle cx="250" cy="220" r="150" fill="url(#glow)"/>
+  <circle cx="250" cy="220" r="80" fill="url(#orb)"/>
+  <rect x="200" y="195" width="100" height="50" rx="25" fill="#1e1b4b"/>
+  <path d="M222 220q8-10 16 0M262 220q8-10 16 0" stroke="#93c5fd" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <ellipse cx="250" cy="318" rx="60" ry="10" fill="none" stroke="#60a5fa" stroke-width="3" opacity=".6"/>
+  <g transform="translate(470 120)">
+    <rect width="230" height="190" rx="18" fill="#1e2a6e" stroke="#6366f1" stroke-opacity=".6" stroke-width="2"/>
+    <g fill="#60a5fa"><circle cx="38" cy="45" r="16"/><circle cx="38" cy="98" r="16" fill="#818cf8"/><circle cx="38" cy="151" r="16" fill="#6366f1"/></g>
+    <path d="M30 45l6 6 11-12M30 98l6 6 11-12M30 151l6 6 11-12" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <g fill="#4f63c9"><rect x="70" y="36" width="130" height="8" rx="4"/><rect x="70" y="52" width="90" height="6" rx="3"/><rect x="70" y="89" width="130" height="8" rx="4"/><rect x="70" y="105" width="90" height="6" rx="3"/><rect x="70" y="142" width="130" height="8" rx="4"/><rect x="70" y="158" width="90" height="6" rx="3"/></g>
+  </g>
+  <g transform="translate(160 400)">
+    <path d="M0 20Q120 -10 240 30V170Q120 130 0 160Z" fill="#e0e7ff"/>
+    <path d="M480 20Q360 -10 240 30V170Q360 130 480 160Z" fill="#c7d2fe"/>
+    <path d="M240 30V170" stroke="#6366f1" stroke-width="3"/>
+    <g stroke="#a5b4fc" stroke-width="4" stroke-linecap="round"><path d="M40 55Q120 40 205 62M40 85Q120 70 205 92M40 115Q120 100 205 122M275 62Q360 40 440 55M275 92Q360 70 440 85M275 122Q360 100 440 115"/></g>
+  </g>
+  <g stroke="#818cf8" stroke-width="7" stroke-linecap="round">
+    <path d="M520 360v20M545 345v50M570 330v80M595 350v40M620 340v60M645 355v30M670 365v10"/>
+  </g>
+  <g fill="none" stroke="#93c5fd" stroke-width="3" opacity=".7" font-family="serif">
+    <path d="M90 470l35-60 35 60z"/>
+    <path d="M410 70h40l-30 30 30 30h-40"/>
+  </g>
+  <text x="380" y="345" fill="#93c5fd" opacity=".7" font-family="Georgia,serif" font-size="34" font-style="italic">√x</text>
+</svg>

@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* Editorial palette — warm paper (light) / ink (dark), one blue accent. */
+:root {
+  --bg: #f4f2ee;
+  --bg-alt: #ebe8e2;
+  --text: #141414;
+  --muted: #55534f;
+  --border: #d4d0c7;
+  --card: #faf9f6;
+  --accent: #1d4ed8;
+  --accent-glow: rgba(29, 78, 216, 0.1);
+  --nav: rgba(244, 242, 238, 0.82);
+}
+[data-theme="dark"] {
+  --bg: #111111;
+  --bg-alt: #171717;
+  --text: #ededea;
+  --muted: #a3a3a0;
+  --border: #2a2a2a;
+  --card: #161616;
+  --accent: #6aa8ff;
+  --accent-glow: rgba(106, 168, 255, 0.14);
+  --nav: rgba(17, 17, 17, 0.82);
+}
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--ff-display), "Times New Roman", serif;
+  --font-mono: var(--ff-mono), ui-monospace, SFMono-Regular, monospace;
+  --color-bg: var(--bg);
+  --color-bg-alt: var(--bg-alt);
+  --color-fg: var(--text);
+  --color-muted: var(--muted);
+  --color-line: var(--border);
+  --color-card: var(--card);
+  --color-accent: var(--accent);
+  --color-glow: var(--accent-glow);
+  --color-nav: var(--nav);
+}
+
+html { -webkit-text-size-adjust: 100%; }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+body { background: var(--bg); color: var(--text); transition: background-color .4s ease, color .4s ease; overflow-x: clip; }
+::selection { background: var(--accent); color: var(--bg); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+.ease-site { transition: all .45s cubic-bezier(.22, 1, .36, 1); }
+
+/* Word-split headings: each word sits in a clipping mask so it can slide up. */
+.w-mask { display: inline-block; overflow: hidden; vertical-align: bottom; padding-bottom: .08em; margin-bottom: -.08em; }
+.w-inner { display: inline-block; will-change: transform; }
+
+/* Marquee */
+@keyframes marquee { to { transform: translateX(-50%); } }
+.marquee-track { animation: marquee 40s linear infinite; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+
+
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+  .ease-site { transition: none; }
+  .cursor-ring { display: none; }
+}
+
+@layer components {
+  .display { font-family: var(--ff-display), serif; font-weight: 400; text-transform: uppercase; line-height: .9; letter-spacing: -0.01em; }
+  .label { font-family: var(--ff-mono), monospace; font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; }
+}
